@@ -1,0 +1,23 @@
+# wombat colors on background
+exec --no-startup-id xsetroot -solid "#1c1c1c"
+
+# start dmenu (a program launcher)
+bindsym $mod+Return exec --no-startup-id dmenu_run -fn "Source Code Pro-8" -nb "#1c1c1c" -nf "#f6f3e8" -sb "#cae682" -sf "#1c1c1c"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3status
+        colors {
+            focused_workspace   #cae682 #cae682 #1c1c1c
+            active_workspace    #1c1c1c #1c1c1c #f6f3e8
+            inactive_workspace  #1c1c1c #1c1c1c #f6f3e8
+            urgent_workspace    #e5786d #e5786d #1c1c1c
+        }
+}
+
+# class                 border  backgr. text    indicator
+client.focused          #333333 #333333 #f6f3e8 #444444
+client.focused_inactive #000000 #000000 #f6f3e8 #444444
+client.unfocused        #000000 #000000 #f6f3e8 #444444
+client.urgent           #e5786d #e5786d #f6f3e8 #444444
